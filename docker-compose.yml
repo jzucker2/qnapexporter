@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+  rufus:
+    container_name: rufus
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: [ 'sh', 'run_prod.sh' ]
+    restart: on-failure
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "5000:5000"
+      - "9200:9200"
+    stdin_open: true
+    tty: true
