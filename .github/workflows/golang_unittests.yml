@@ -22,10 +22,10 @@ jobs:
     steps:
       - name: Check out source repository
         uses: actions/checkout@v4
-      - name: Set up Python environment
+      - name: Set up golang environment
         uses: actions/setup-go@v4
         with:
           go-version: '1.19'
-      - name: Test with unittest
+      - name: Run tests
         run: |
           make test
