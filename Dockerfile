@@ -15,7 +15,8 @@ COPY *.go ./
 
 # Build
 #RUN CGO_ENABLED=0 GOOS=linux go build -o /qnapexporter
-RUN go build -o /qnapexporter
+#RUN go build -o /qnapexporter
+RUN make build
 
 # Optional:
 # To bind to a TCP port, runtime parameters must be supplied to the docker command.
@@ -25,4 +26,4 @@ RUN go build -o /qnapexporter
 EXPOSE 9094
 
 # Run
-CMD ["/qnapexporter"]
+CMD ["/bin/qnapexporter"]
