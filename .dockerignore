@@ -2,9 +2,7 @@ Dockerfile
 .DS_Store
 .gitignore
 .dockerignore
-
-rufus/app/app.db
-rufus/tests/
+.tool-versions
 
 /node_modules
 *.DS_Store
