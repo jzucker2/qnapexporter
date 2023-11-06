@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  qnapexporter:
+    container_name: qnapexporter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - 9094:9094
+    stdin_open: true
+    tty: true

@@ -1,3 +1,5 @@
 bin/
 
 tags
+.idea/
+.tool-versions
